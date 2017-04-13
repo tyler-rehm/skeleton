@@ -8,6 +8,10 @@
     </style>
 @endsection
 
+@section('modal_body')
+    <h1>Hello World!</h1>
+@endsection
+
 @section('content')
         <div class="row  border-bottom white-bg dashboard-header"> <!-- full width dashboard header -->
 
@@ -46,6 +50,7 @@
                         <span class="label label-primary">5</span> Write a letter to Sandra
                     </li>
                 </ul>
+                @include('partials._modal', array('attributes' => array('modal_button' => 'Open', 'modal_title' => 'Modal title', 'modal_description' => 'Modal description goes here', 'modal_submit' => 'Go!')))
             </div>
             <div class="col-md-6">
                 <div class="flot-chart dashboard-chart">
@@ -421,7 +426,6 @@
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
